@@ -30,24 +30,58 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-      
-                    // Use XCTAssert and related functions to verify your tests produce the correct results.
-      
-      app.navigationBars["Master"].buttons["Add"].tap()
-      
-      let addAMealAlert = app.alerts["Add a Meal"]
-      let collectionViewsQuery = addAMealAlert.collectionViews
-      collectionViewsQuery.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element.typeText("Burger")
-      
-      let textField = collectionViewsQuery.children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element
-      textField.tap()
-      textField.typeText("300")
-      addAMealAlert.buttons["Ok"].tap()
-      
-      
-                  
-    }
+    func testAddMeal() {
     
+      addNewMeal(mealName: "Burger", numberOfCalories: 300)
+    }
+  
+
+  
+  func testDeleteMeal() {
+    
+    deleteMeal()
+  }
+  
+  func testShowMealDetail() {
+    showMeal(mealName: "Burger", numberOfCalories: 300)
+    app.navigationBars["Detail"].buttons["Master"].tap()
+    
+  }
+  
+  // Mark: Helper functions
+  
+  func addNewMeal(mealName:String, numberOfCalories:Int){
+    app.navigationBars["Master"].buttons["Add"].tap()
+    let addAMealAlert = app.alerts["Add a Meal"]
+    let collectionViewsQuery = addAMealAlert.collectionViews
+    collectionViewsQuery.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element.typeText(mealName)
+    
+    let textField = collectionViewsQuery.children(matching: .other).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element
+    textField.tap()
+    textField.typeText(numberOfCalories.description)
+          addAMealAlert.buttons["Ok"].tap()
+  }
+  
+  
+  fileprivate func deleteMeal() {
+    let tablesQuery = app.tables
+    let burger300StaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Burger - 300"]/*[[".cells.staticTexts[\"Burger - 300\"]",".staticTexts[\"Burger - 300\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    if burger300StaticText.exists {
+      burger300StaticText.swipeLeft()
+      tablesQuery.buttons["Delete"].tap()
+    }
+  }
+  
+  func showMeal(mealName:String, numberOfCalories:Int){
+    let tablesQuery = app.tables
+    let celltext = mealName + " - " + numberOfCalories.description
+    let staticText = tablesQuery.staticTexts[celltext]
+    if staticText.exists {
+      staticText.tap()
+      
+      //check we are on the detail controller
+      XCTAssertEqual(app.staticTexts["detailViewLabel"].label, celltext)
+      
+    }
+  }
 }
