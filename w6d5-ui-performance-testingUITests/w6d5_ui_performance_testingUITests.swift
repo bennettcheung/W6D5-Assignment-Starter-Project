@@ -28,6 +28,7 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+      deleteMeal()
     }
     
     func testAddMeal() {
@@ -40,6 +41,10 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
   func testDeleteMeal() {
     
     deleteMeal()
+  }
+  
+  func testDeleteAllMeals() {
+    deleteAllMeals()
   }
   
   func testShowMealDetail() {
@@ -68,6 +73,16 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
     let burger300StaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Burger - 300"]/*[[".cells.staticTexts[\"Burger - 300\"]",".staticTexts[\"Burger - 300\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     if burger300StaticText.exists {
       burger300StaticText.swipeLeft()
+      tablesQuery.buttons["Delete"].tap()
+    }
+  }
+  
+  fileprivate func deleteAllMeals() {
+    let tablesQuery = app.tables
+    let total = tablesQuery.staticTexts.count
+    for i in (0..<total).reversed(){
+      let staticText = tablesQuery.staticTexts.element(boundBy: i)
+      staticText.swipeLeft()
       tablesQuery.buttons["Delete"].tap()
     }
   }

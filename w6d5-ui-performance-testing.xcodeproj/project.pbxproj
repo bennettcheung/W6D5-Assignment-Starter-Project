@@ -15,10 +15,18 @@
 		2A3561481FDCF496007EEEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3561471FDCF496007EEEDC /* Assets.xcassets */; };
 		2A35614B1FDCF496007EEEDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3561491FDCF496007EEEDC /* LaunchScreen.storyboard */; };
 		2A3BA9C31FEB428200B29939 /* PerformanceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BA9C21FEB428200B29939 /* PerformanceDataModel.swift */; };
+		91F4D6B221430EC500DF0156 /* w6d5_ui_performance_testingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D6B121430EC500DF0156 /* w6d5_ui_performance_testingTests.swift */; };
 		91FF15D52142F7E7008602EB /* w6d5_ui_performance_testingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF15D42142F7E7008602EB /* w6d5_ui_performance_testingUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		91F4D6B421430EC500DF0156 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A3561301FDCF496007EEEDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A3561371FDCF496007EEEDC;
+			remoteInfo = "w6d5-ui-performance-testing";
+		};
 		91FF15D72142F7E7008602EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A3561301FDCF496007EEEDC /* Project object */;
@@ -39,6 +47,9 @@
 		2A35614A1FDCF496007EEEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A35614C1FDCF496007EEEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A3BA9C21FEB428200B29939 /* PerformanceDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceDataModel.swift; sourceTree = "<group>"; };
+		91F4D6AF21430EC500DF0156 /* w6d5-ui-performance-testingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "w6d5-ui-performance-testingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F4D6B121430EC500DF0156 /* w6d5_ui_performance_testingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = w6d5_ui_performance_testingTests.swift; sourceTree = "<group>"; };
+		91F4D6B321430EC500DF0156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FF15D22142F7E7008602EB /* w6d5-ui-performance-testingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "w6d5-ui-performance-testingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FF15D42142F7E7008602EB /* w6d5_ui_performance_testingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = w6d5_ui_performance_testingUITests.swift; sourceTree = "<group>"; };
 		91FF15D62142F7E7008602EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +57,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2A3561351FDCF496007EEEDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F4D6AC21430EC500DF0156 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +85,7 @@
 			children = (
 				2A35613A1FDCF496007EEEDC /* w6d5-ui-performance-testing */,
 				91FF15D32142F7E7008602EB /* w6d5-ui-performance-testingUITests */,
+				91F4D6B021430EC500DF0156 /* w6d5-ui-performance-testingTests */,
 				2A3561391FDCF496007EEEDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +95,7 @@
 			children = (
 				2A3561381FDCF496007EEEDC /* w6d5-ui-performance-testing.app */,
 				91FF15D22142F7E7008602EB /* w6d5-ui-performance-testingUITests.xctest */,
+				91F4D6AF21430EC500DF0156 /* w6d5-ui-performance-testingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +114,15 @@
 				2A35613D1FDCF496007EEEDC /* w6d3_fetchedresultscontroller.xcdatamodeld */,
 			);
 			path = "w6d5-ui-performance-testing";
+			sourceTree = "<group>";
+		};
+		91F4D6B021430EC500DF0156 /* w6d5-ui-performance-testingTests */ = {
+			isa = PBXGroup;
+			children = (
+				91F4D6B121430EC500DF0156 /* w6d5_ui_performance_testingTests.swift */,
+				91F4D6B321430EC500DF0156 /* Info.plist */,
+			);
+			path = "w6d5-ui-performance-testingTests";
 			sourceTree = "<group>";
 		};
 		91FF15D32142F7E7008602EB /* w6d5-ui-performance-testingUITests */ = {
@@ -124,6 +153,24 @@
 			productName = "w6d3-fetchedresultscontroller";
 			productReference = 2A3561381FDCF496007EEEDC /* w6d5-ui-performance-testing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		91F4D6AE21430EC500DF0156 /* w6d5-ui-performance-testingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91F4D6B621430EC500DF0156 /* Build configuration list for PBXNativeTarget "w6d5-ui-performance-testingTests" */;
+			buildPhases = (
+				91F4D6AB21430EC500DF0156 /* Sources */,
+				91F4D6AC21430EC500DF0156 /* Frameworks */,
+				91F4D6AD21430EC500DF0156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91F4D6B521430EC500DF0156 /* PBXTargetDependency */,
+			);
+			name = "w6d5-ui-performance-testingTests";
+			productName = "w6d5-ui-performance-testingTests";
+			productReference = 91F4D6AF21430EC500DF0156 /* w6d5-ui-performance-testingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		91FF15D12142F7E7008602EB /* w6d5-ui-performance-testingUITests */ = {
 			isa = PBXNativeTarget;
@@ -157,6 +204,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					91F4D6AE21430EC500DF0156 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2A3561371FDCF496007EEEDC;
+					};
 					91FF15D12142F7E7008602EB = {
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
@@ -179,6 +230,7 @@
 			targets = (
 				2A3561371FDCF496007EEEDC /* w6d5-ui-performance-testing */,
 				91FF15D12142F7E7008602EB /* w6d5-ui-performance-testingUITests */,
+				91F4D6AE21430EC500DF0156 /* w6d5-ui-performance-testingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +243,13 @@
 				2A35614B1FDCF496007EEEDC /* LaunchScreen.storyboard in Resources */,
 				2A3561481FDCF496007EEEDC /* Assets.xcassets in Resources */,
 				2A3561461FDCF496007EEEDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F4D6AD21430EC500DF0156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +275,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91F4D6AB21430EC500DF0156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F4D6B221430EC500DF0156 /* w6d5_ui_performance_testingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		91FF15CE2142F7E7008602EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +294,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		91F4D6B521430EC500DF0156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A3561371FDCF496007EEEDC /* w6d5-ui-performance-testing */;
+			targetProxy = 91F4D6B421430EC500DF0156 /* PBXContainerItemProxy */;
+		};
 		91FF15D82142F7E7008602EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A3561371FDCF496007EEEDC /* w6d5-ui-performance-testing */;
@@ -402,6 +474,46 @@
 			};
 			name = Release;
 		};
+		91F4D6B721430EC500DF0156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "w6d5-ui-performance-testingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bennett.w6d5-ui-performance-testingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/w6d5-ui-performance-testing.app/w6d5-ui-performance-testing";
+			};
+			name = Debug;
+		};
+		91F4D6B821430EC500DF0156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "w6d5-ui-performance-testingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bennett.w6d5-ui-performance-testingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/w6d5-ui-performance-testing.app/w6d5-ui-performance-testing";
+			};
+			name = Release;
+		};
 		91FF15D92142F7E7008602EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +575,15 @@
 			buildConfigurations = (
 				2A3561501FDCF496007EEEDC /* Debug */,
 				2A3561511FDCF496007EEEDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91F4D6B621430EC500DF0156 /* Build configuration list for PBXNativeTarget "w6d5-ui-performance-testingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F4D6B721430EC500DF0156 /* Debug */,
+				91F4D6B821430EC500DF0156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
