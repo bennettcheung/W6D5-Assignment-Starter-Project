@@ -28,7 +28,7 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-      deleteMeal()
+        deleteAllMeals()
     }
     
     func testAddMeal() {
@@ -40,7 +40,7 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
   
   func testDeleteMeal() {
     
-    deleteMeal()
+    deleteMeal(mealName: "Burger", numberOfCalories: 300)
   }
   
   func testDeleteAllMeals() {
@@ -51,6 +51,13 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
     showMeal(mealName: "Burger", numberOfCalories: 300)
     app.navigationBars["Detail"].buttons["Master"].tap()
     
+  }
+  
+  func testAddDeletePerformance() {
+    measure {
+      addNewMeal(mealName: "Burger", numberOfCalories: 300)
+      deleteMeal(mealName: "Burger", numberOfCalories: 300)
+    }
   }
   
   // Mark: Helper functions
@@ -68,9 +75,10 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
   }
   
   
-  fileprivate func deleteMeal() {
+  fileprivate func deleteMeal(mealName:String, numberOfCalories:Int){
     let tablesQuery = app.tables
-    let burger300StaticText = tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Burger - 300"]/*[[".cells.staticTexts[\"Burger - 300\"]",".staticTexts[\"Burger - 300\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    let celltext = mealName + " - " + numberOfCalories.description
+    let burger300StaticText = tablesQuery.staticTexts[celltext]
     if burger300StaticText.exists {
       burger300StaticText.swipeLeft()
       tablesQuery.buttons["Delete"].tap()
